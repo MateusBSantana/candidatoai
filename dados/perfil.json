@@ -1,0 +1,16 @@
+{
+  "nome": "Mateus Barboza Santana",
+  "objetivo": "Estágio em Desenvolvimento / Dados / IA",
+  "formacao": [
+    "Sistemas para Internet - Instituto Federal do Espírito Santo (IFES) - 2024 - 2027"
+  ],
+  "habilidades": [
+    "Python",
+    "SQL",
+    "Git"
+  ],
+  "projetos": [
+    "CandidatoAI",
+    "HóspedaFacil"
+  ]
+}

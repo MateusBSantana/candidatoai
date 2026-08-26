@@ -1,0 +1,12 @@
+Estágio em Desenvolvimento de Software
+
+Buscamos estudante de TI para atuar em projetos internos.
+
+Requisitos:
+- Conhecimento em Python
+- Noções de SQL e bancos de dados
+- Familiaridade com Git e controle de versão
+- Desejável: experiência com APIs REST
+- Diferencial: conhecimento em React ou JavaScript
+
+Oferecemos bolsa auxílio, vale transporte e possibilidade de efetivação.
