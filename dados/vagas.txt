@@ -1,12 +1,51 @@
-Estágio em Desenvolvimento de Software
+Sobre a vaga
+Engenheiro (a) de Dados - Júnior
 
-Buscamos estudante de TI para atuar em projetos internos.
+Na EY, estamos comprometidos em moldar seu futuro com confiança.
 
-Requisitos:
-- Conhecimento em Python
-- Noções de SQL e bancos de dados
-- Familiaridade com Docker e controle de versão
-- Desejável: experiência com APIs REST
-- Diferencial: conhecimento em React ou JavaScript
+Nós ajudaremos você a ter sucesso em um ambiente globalmente conectado, repleto de equipes diversas, e a levar sua carreira para onde você desejar.
 
-Oferecemos bolsa auxílio, vale transporte e possibilidade de efetivação.
+Venha para EY e ajude-nos a construir um mundo de negócios melhor.
+
+Sobre a oportunidade:
+
+Em Financial Services (FSO), estamos construindo um mundo de negócios melhor apoiando as necessidades e desafios dos nossos clientes do segmento financeiro (Mercado de Capitais, Bancos, Seguros e Gestão de Ativos) através de uma única área/linha de serviço que une nossas diferentes especialidades (Auditoria, Consultoria, Tecnologia, etc) para atender este setor de forma abrangente e customizada. #FSOEY
+
+Você assumirá as seguintes responsabilidades:
+
+Colabore em equipes multidisciplinares, comunicando-se de forma eficaz e contribuindo para soluções inovadoras em projetos de dados. Utilize pensamento crítico para analisar informações, identificar padrões e propor melhorias. Busque aprendizado contínuo, adaptando-se às novas tecnologias e tendências do mercado, e resolva problemas de forma criativa e eficiente, impulsionando resultados de alto impacto.
+
+Requisitos e habilidades que buscamos:
+
+Nível superior completo ou em andamento nas áreas de Informática, Matemática, Estatística, Economia, Administração, Engenharias e áreas correlatas.
+Proficiência em Python para scripts, manipulação de dados e soluções de ETL.
+Conhecimento em SQL para manipulação e consulta de bancos de dados.
+Habilidade em PySpark para manipulação de dados.
+Experiência com Apache Spark para processamento de dados em larga escala.
+Conhecimento em Hadoop para armazenamento e processamento de dados.
+Capacidade de escrever consultas HiveQL e otimizar consultas.
+Uso de GitHub para colaboração em projetos de equipe.
+PowerBI ou outras ferramentas de Data Visualization.
+ElasticSearch: Implementação de soluções de busca, análise, otimização de índices e consultas, e integração com ferramentas.
+Conhecimento com Databricks.
+Familiaridade com ferramentas DevOps e IA Generativa.
+
+Benefícios: 
+
+Vale Alimentação e/ou Vale Refeição, Vale Transporte, Plano de saúde, Assistência odontológica, EY Vantagens (plataforma exclusiva de benefícios da EY), Universidade Corporativa e outros benefícios Educacionais, Gympass, PLR, e muito mais.
+
+O que oferecemos:
+
+Na EY, você se desenvolve com habilidades voltadas para o futuro e se abastece de experiências de classe mundial. Nós capacitaremos você em um ambiente flexível e potencializaremos seus talentos extraordinários em uma cultura diversa e inclusiva, com equipes globalmente conectadas.
+
+Pelo 4º ano consecutivo, a EY está na lista do Great Place to Work como uma das melhores empresa para se trabalhar, com destaque para as categorias de diversidade. Você poderá fazer parte de nossos programas e grupos que, juntos a inúmeras iniciativas internas, apoiam nossa constante busca pela equidade.
+
+Você gostaria de moldar seu futuro com confiança? Inscreva-se hoje!
+
+Para ajudar a criar a melhor experiência durante o processo de recrutamento, por favor, descreva qualquer acessibilidade você possa precisar.
+
+Saiba mais sobre como é trabalhar na EY:
+
+Carreiras na EY LinkedIn @EY Instagram @eybrasilcarreiras
+
+#EngenhariaDeDados #DataEngineer #Python #Spark #Databricks #SQL #PySpark #Inclusão #Diversidade #FSOEY #VagaAfirmativaPCD #TechEY #EYCarreiras

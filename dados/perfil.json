@@ -1,16 +1,29 @@
 {
   "nome": "Mateus Barboza Santana",
-  "objetivo": "Estágio em Desenvolvimento / Dados / IA",
+  "objetivo": "Posição inicial em Machine Learning, Inteligência Artificial ou Data Science",
   "formacao": [
-    "Sistemas para Internet - Instituto Federal do Espírito Santo (IFES) - 2024 - 2027"
+    "Sistemas para Internet (IFES) - em andamento"
   ],
   "habilidades": [
     "Python",
     "SQL",
-    "Git"
+    "Java",
+    "JavaScript",
+    "React",
+    "Node.js",
+    "APIs REST",
+    "Programação Orientada a Objetos",
+    "Git",
+    "Linux",
+    "Pandas",
+    "NumPy",
+    "Scikit-learn",
+    "PyTorch",
+    "Deep Learning",
+    "IA Generativa"
   ],
   "projetos": [
-    "CandidatoAI",
-    "HóspedaFacil"
+    "HospedaFacil",
+    "CandidatoIA"
   ]
 }

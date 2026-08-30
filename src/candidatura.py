@@ -19,6 +19,7 @@ with open("./dados/perfil.json", "r", encoding="utf-8") as arquivo:
         if(habilidade in conteudo):
             habilidades_compativeis.append(habilidade)
         else:
+            #Guardado para uso futuro no RF 005, quando o LLM estiver integrado
             habilidades_incompativeis.append(habilidade)
 
 habilidades = ', '.join(habilidades_compativeis)
@@ -27,12 +28,12 @@ porcentagem_compativel = len(habilidades_compativeis) * 100 / len(perfil_candida
 porcentagem_compativel = int(round(porcentagem_compativel, 0))
 
 if(porcentagem_compativel >= 70):
-    print("Grandes chances de ser aprovado!")
+    print("Grande aderência das habilidades na vaga!")
 elif((porcentagem_compativel <= 69) and (porcentagem_compativel >= 50)):
-    print("Boas chances de ser aprovado!")
+    print("Boa aderência das habilidades na vaga!")
 else:
-    print("Pouca chance ser aprovado")
+    print("Pouca aderência das habilidades na vaga")
 
 print(f"Essas habilidades batem com a vaga: {habilidades}!")
 
-print(f"Chance de aprovação: {porcentagem_compativel}%")
+print(f"Porcentagem de aderência de habilidades na vaga: {porcentagem_compativel}%")
