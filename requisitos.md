@@ -1,14 +1,17 @@
 Requisitos Funcionais (RF) — CandidatoIA
+[RF 001] Cadastro de candidato: O sistema poderá resgitrar e gerenciar os perfis dos candidatos.
 
-[RF 001] Leitura do perfil do candidato: O sistema poderá ler as informações do candidato, como: nome, contato, objetivo, formação, habilidades e projetos.
+[RF 002] Gerenciamento de vagas: O sistema poderá resgitrar as vagas, seja po meio de sites como (Linkedin, Indeed, Infojobs, entre outros), por meio de canais de comunicação como (Whatsapp e telegram) e por trabalhe conosco.
 
-[RF 002] Leitura das informações da vaga: O sistema poderá ler as informações da vaga em questão, como: nome da vaga, endereço, descrição da vaga, requisitos, salário e benefícios.
+[RF 003] Leitura do perfil do candidato: O sistema poderá ler as informações do candidato, como: nome, contato, objetivo, formação, habilidades e projetos.
 
-[RF 003] Comparação entre habilidades do perfil e a vaga: O sistema poderá identificar quais informações do candidato e da vaga serão compatíveis.
+[RF 004] Leitura das informações da vaga: O sistema poderá ler as informações da vaga em questão, como: nome da vaga, endereço, descrição da vaga, requisitos, salário e benefícios.
 
-[RF 004] Score de compatibilidade: O sistema poderá demonstrar um gráfico coluna, mostrando a porcentagem de quanto o candidato está apto à vaga.
+[RF 005] Comparação entre habilidades do perfil e a vaga: O sistema poderá identificar quais informações do candidato e da vaga serão compatíveis.
 
-[RF 005] Score de melhorias: O sistema poderá demonstrar um gráfico radar, mostrando quais habilidades o candidato tem e o que ele precisa melhorar.
+[RF 006] Score de compatibilidade: O sistema poderá demonstrar um gráfico coluna, mostrando a porcentagem de quanto o candidato está apto à vaga.
+
+[RF 007] Score de melhorias: O sistema poderá demonstrar um gráfico radar, mostrando quais habilidades o candidato tem e o que ele precisa melhorar.
 
 Pendências
 
