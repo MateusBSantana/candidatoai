@@ -1,51 +1,70 @@
-Sobre a vaga
-Engenheiro (a) de Dados - Júnior
+Profissional Cientista de Dados Junior
+Remota
+BR
+A primeira coisa que você precisa saber é que aqui você não vai cair na rotina. A Radix desenvolve soluções para empresas de diferentes setores e indústrias. Cada projeto tem suas tecnologias, soluções e prazos e você terá oportunidade de atuar e experimentar diferentes desafios. Além da nossa atuação pelo Brasil, com escritório no Rio de janeiro, São Paulo e Belo Horizonte, temos também filiais nos Estados Unidos, fazendo com que a Radix se consolide cada vez mais como uma empresa global. 
 
-Na EY, estamos comprometidos em moldar seu futuro com confiança.
+ 
 
-Nós ajudaremos você a ter sucesso em um ambiente globalmente conectado, repleto de equipes diversas, e a levar sua carreira para onde você desejar.
+Quer fazer parte dessa história e transformar ideias e sonhos em realidade? 
 
-Venha para EY e ajude-nos a construir um mundo de negócios melhor.
+ 
 
-Sobre a oportunidade:
+Como Profissional de Ciência de Dados você vai:  
 
-Em Financial Services (FSO), estamos construindo um mundo de negócios melhor apoiando as necessidades e desafios dos nossos clientes do segmento financeiro (Mercado de Capitais, Bancos, Seguros e Gestão de Ativos) através de uma única área/linha de serviço que une nossas diferentes especialidades (Auditoria, Consultoria, Tecnologia, etc) para atender este setor de forma abrangente e customizada. #FSOEY
+Coletar, limpar e organizar dados de fontes diversas para análises.
+Desenvolver modelos básicos de machine learning sob a supervisão de cientistas de dados mais experientes.
+Auxiliar na execução de tarefas como criação de relatórios, geração de insights e visualização de dados.
+Contribuir na documentação de processos, scripts e análises.
+Focar no aprimoramento de habilidades técnicas, como a programação em Python, banco de dados e o uso de bibliotecas de ciência de dados como pandas, numpy e scikit-learn.
+Apoiar na validação de modelos de machine learning.
+Trabalhar em conjunto com engenheiros de dados e cientistas de dados para compreender melhor o problema de negócios e como a ciência de dados pode ser empregada para a solução dos mesmos.
+ 
 
-Você assumirá as seguintes responsabilidades:
+Para essa vaga, você deve ter:
 
-Colabore em equipes multidisciplinares, comunicando-se de forma eficaz e contribuindo para soluções inovadoras em projetos de dados. Utilize pensamento crítico para analisar informações, identificar padrões e propor melhorias. Busque aprendizado contínuo, adaptando-se às novas tecnologias e tendências do mercado, e resolva problemas de forma criativa e eficiente, impulsionando resultados de alto impacto.
+Entender a diferença entre tipos de aprendizagem (supervisionado, não supervisionado etc.), além do básico de estatística descritiva.
+Entender o que é um dataset e saber o básico sobre análise de dados.
+Noções de base de dados relacionais e/ou não-relacionais.
+Conhecimento de Python e de algumas bibliotecas populares de ciência de dados, como pandas, scikit-learn, matplotlib etc.
+Conhecimento em algoritmos e estrutura de dados.
+Habilidades em análise: Capacidade de realizar análises de dados simples, com foco na extração, limpeza e interpretação de dados.
+Interesse em aprender novas técnicas de machine learning e boas práticas de ciência de dados.
+Habilidade para trabalhar em conjunto com profissionais mais experientes, absorvendo orientações e feedbacks.
+Inglês intermediário para conversação.
+ 
 
-Requisitos e habilidades que buscamos:
+É um diferencial se você tiver:
 
-Nível superior completo ou em andamento nas áreas de Informática, Matemática, Estatística, Economia, Administração, Engenharias e áreas correlatas.
-Proficiência em Python para scripts, manipulação de dados e soluções de ETL.
-Conhecimento em SQL para manipulação e consulta de bancos de dados.
-Habilidade em PySpark para manipulação de dados.
-Experiência com Apache Spark para processamento de dados em larga escala.
-Conhecimento em Hadoop para armazenamento e processamento de dados.
-Capacidade de escrever consultas HiveQL e otimizar consultas.
-Uso de GitHub para colaboração em projetos de equipe.
-PowerBI ou outras ferramentas de Data Visualization.
-ElasticSearch: Implementação de soluções de busca, análise, otimização de índices e consultas, e integração com ferramentas.
-Conhecimento com Databricks.
-Familiaridade com ferramentas DevOps e IA Generativa.
+Graduação em áreas como Ciência da Computação, Engenharia, Estatística, Matemática, Física, Economia ou áreas correlatas.
+Cursos de especialização ou de curta duração em Ciência de Dados / Machine Learning.
+Conhecimento de técnicas de engenharia de prompt para geração de soluções de IA Generativa sem o emprego de fine tuning de modelos. 
+Experiência em Modelagem Matemática e Otimização Combinatória.
+ 
 
 Benefícios: 
 
-Vale Alimentação e/ou Vale Refeição, Vale Transporte, Plano de saúde, Assistência odontológica, EY Vantagens (plataforma exclusiva de benefícios da EY), Universidade Corporativa e outros benefícios Educacionais, Gympass, PLR, e muito mais.
+Assistência Médica Nacional (para o titular e dependentes, com quarto privativo) 
+Assistência odontológica nacional (para o titular e dependentes) 
+Vale refeição / alimentação flexível 
+Auxílio home office  
+Day off (no mês do aniversário) 
+Wellhub (antigo Gympass) 
+Licença Maternidade (6 meses) e Paternidade (20 dias) estendidas 
+Auxílio creche para filhos de até 3 anos (por filho)  
+Apoio em saúde mental com a Wellz 
+Clube de Vantagens com descontos em diversos parceiros 
+Convênio com instituições de ensino e cursos de idioma 
+Desenvolvimento Profissional (Universidade Corporativa) 
+Parceria com empresa de coworkings no Brasil 
+Programa de Qualidade de Vida e Bem-Estar 
+Médico consultor para acompanhamento de radixers 
+Planos de incentivos 
+ 
 
-O que oferecemos:
+ A Radix está sempre no topo das Melhores Empresas para se trabalhar porque: 
 
-Na EY, você se desenvolve com habilidades voltadas para o futuro e se abastece de experiências de classe mundial. Nós capacitaremos você em um ambiente flexível e potencializaremos seus talentos extraordinários em uma cultura diversa e inclusiva, com equipes globalmente conectadas.
-
-Pelo 4º ano consecutivo, a EY está na lista do Great Place to Work como uma das melhores empresa para se trabalhar, com destaque para as categorias de diversidade. Você poderá fazer parte de nossos programas e grupos que, juntos a inúmeras iniciativas internas, apoiam nossa constante busca pela equidade.
-
-Você gostaria de moldar seu futuro com confiança? Inscreva-se hoje!
-
-Para ajudar a criar a melhor experiência durante o processo de recrutamento, por favor, descreva qualquer acessibilidade você possa precisar.
-
-Saiba mais sobre como é trabalhar na EY:
-
-Carreiras na EY LinkedIn @EY Instagram @eybrasilcarreiras
-
-#EngenhariaDeDados #DataEngineer #Python #Spark #Databricks #SQL #PySpark #Inclusão #Diversidade #FSOEY #VagaAfirmativaPCD #TechEY #EYCarreiras
+Temos profissionais comprometidos, dedicados, curiosos e inovadores. 
+O espírito de equipe é a nossa maior força. Trabalhamos de forma cooperativa e sabemos que estamos juntos, remando na mesma direção. 
+Temos um ambiente diverso, que valoriza equidade e inclusão. 
+Nossa jornada de trabalho é flexível e em quase todos os projetos é possível trabalhar de qualquer lugar do Brasil. 
+Valorizamos o bem-estar e o cuidado com as nossas pessoas, com programas de apoio à saúde mental, psiquiatra e médico consultor disponíveis.

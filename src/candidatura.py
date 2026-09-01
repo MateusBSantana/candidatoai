@@ -1,7 +1,32 @@
 import json
+import sqlite3
 
 habilidades_compativeis = []
 habilidades_incompativeis = []
+
+sql_vagas = "CREATE TABLE IF NOT EXISTS vagas ( id_vaga INTEGER PRIMARY KEY AUTOINCREMENT, nome_vaga TEXT, nome_empresa TEXT, data_vaga_criada TEXT, data_vaga_encerra TEXT, tipo_vaga TEXT, modalidade_trabalho TEXT, local_trabalho TEXT, beneficios TEXT, salario REAL, sobre_vaga TEXT, sobre_empresa TEXT );"
+sql_requisitos = "CREATE TABLE IF NOT EXISTS requisitos ( id_requisito INTEGER PRIMARY KEY AUTOINCREMENT, requisito TEXT );" 
+sql_requisito_vaga = "CREATE TABLE IF NOT EXISTS requisito_vaga ( fk_vaga INTEGER, fk_requisito INTEGER, prioridade TEXT, FOREIGN KEY(fk_vaga) REFERENCES vagas(id_vaga), FOREIGN KEY(fk_requisito) REFERENCES requisitos(id_requisito) );"
+sql_candidatura = "CREATE TABLE IF NOT EXISTS candidaturas ( id_candidatura INTEGER PRIMARY KEY AUTOINCREMENT, fk_vaga INTEGER, data_candidatura TEXT, aderencia INTEGER, FOREIGN KEY(fk_vaga) REFERENCES vagas(id_vaga) );"
+sql_requisitos_candidatura  = "CREATE TABLE IF NOT EXISTS requisitos_candidatura ( fk_candidatura INTEGER, fk_requisito INTEGER, requisito_cumprido INTEGER, FOREIGN KEY(fk_candidatura) REFERENCES candidaturas(id_candidatura), FOREIGN KEY(fk_requisito) REFERENCES requisitos(id_requisito) );"
+
+conexao = sqlite3.connect("candidatoIA.db")
+cursor = conexao.cursor()
+
+cursor.execute(sql_vagas)
+cursor.execute(sql_requisitos)
+cursor.execute(sql_requisito_vaga)
+cursor.execute(sql_candidatura)
+cursor.execute(sql_requisitos_candidatura)
+
+'''res = cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
+resultado = res.fetchall()
+
+print(resultado)'''
+
+conexao.commit()
+conexao.close()
+
 
 #codigo que ler um arquivo.txt e também o deixa minusculo
 with open("./dados/vagas.txt", "r", encoding="utf-8") as arquivo:
