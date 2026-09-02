@@ -10,6 +10,33 @@ sql_requisito_vaga = "CREATE TABLE IF NOT EXISTS requisito_vaga ( fk_vaga INTEGE
 sql_candidatura = "CREATE TABLE IF NOT EXISTS candidaturas ( id_candidatura INTEGER PRIMARY KEY AUTOINCREMENT, fk_vaga INTEGER, data_candidatura TEXT, aderencia INTEGER, FOREIGN KEY(fk_vaga) REFERENCES vagas(id_vaga) );"
 sql_requisitos_candidatura  = "CREATE TABLE IF NOT EXISTS requisitos_candidatura ( fk_candidatura INTEGER, fk_requisito INTEGER, requisito_cumprido INTEGER, FOREIGN KEY(fk_candidatura) REFERENCES candidaturas(id_candidatura), FOREIGN KEY(fk_requisito) REFERENCES requisitos(id_requisito) );"
 
+sql_insere_vaga = "INSERT INTO vagas (nome_vaga, nome_empresa, data_vaga_criada, data_vaga_encerra, tipo_vaga, modalidade_trabalho, local_trabalho, beneficios, salario, sobre_vaga, sobre_empresa) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);"
+
+nome_vaga = input("Digite o nome da vaga: ")
+while(nome_vaga == ""):  
+    nome_vaga = input("Digite o nome da vaga: ")
+nome_empresa = input("Digite o nome da empresa: ")
+data_vaga_criada = input("Digite a data de inicio do processo da vaga: ")
+data_vaga_encerra = input("Digite a data de fim do processo da vaga: ")
+tipo_vaga = input("Digite o tipo da vaga: ")
+modalidade_trabalho = input("Digite a modalidade de trabalho da vaga:: ")
+local_trabalho = input("Digite o local de trabalho da vaga? ")
+beneficios = input("Digite os beneficios da vaga: ")
+salario = input("Digite o salario da vaga: ")
+sobre_vaga = input("Digite  sobre a vaga: ")
+while(sobre_vaga == ""):  
+    sobre_vaga = input("Digite  sobre a vaga: ")
+sobre_empresa = input("Digite sobre a empresa: ")
+
+vaga = {'nome_vaga' : nome_vaga, 'nome_empresa' : nome_empresa, 'data_vaga_criada' : data_vaga_criada, 'data_vaga_encerra' : data_vaga_encerra, 'tipo_vaga' : tipo_vaga, 'modalidade_trabalho' : modalidade_trabalho, 'local_trabalho' : local_trabalho,
+         'beneficios' : beneficios,'salario' : salario,'sobre_vaga' : sobre_vaga,'sobre_empresa' : sobre_empresa}
+
+for x in vaga:
+    if(vaga[x] == ""):
+        vaga[x] = None
+
+valores_vaga = tuple(vaga.values())
+
 conexao = sqlite3.connect("candidatoIA.db")
 cursor = conexao.cursor()
 
@@ -19,10 +46,15 @@ cursor.execute(sql_requisito_vaga)
 cursor.execute(sql_candidatura)
 cursor.execute(sql_requisitos_candidatura)
 
+cursor.execute(sql_insere_vaga, valores_vaga)
+
+
+
 '''res = cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
 resultado = res.fetchall()
 
 print(resultado)'''
+
 
 conexao.commit()
 conexao.close()
@@ -62,3 +94,7 @@ else:
 print(f"Essas habilidades batem com a vaga: {habilidades}!")
 
 print(f"Porcentagem de aderência de habilidades na vaga: {porcentagem_compativel}%")
+
+resposta = input("Digite algo: ")
+print(len(resposta))
+print(resposta == "")
