@@ -3,6 +3,7 @@ import sqlite3
 
 habilidades_compativeis = []
 habilidades_incompativeis = []
+requisitos = [] 
 
 sql_vagas = "CREATE TABLE IF NOT EXISTS vagas ( id_vaga INTEGER PRIMARY KEY AUTOINCREMENT, nome_vaga TEXT, nome_empresa TEXT, data_vaga_criada TEXT, data_vaga_encerra TEXT, tipo_vaga TEXT, modalidade_trabalho TEXT, local_trabalho TEXT, beneficios TEXT, salario REAL, sobre_vaga TEXT, sobre_empresa TEXT );"
 sql_requisitos = "CREATE TABLE IF NOT EXISTS requisitos ( id_requisito INTEGER PRIMARY KEY AUTOINCREMENT, requisito TEXT );" 
@@ -11,6 +12,7 @@ sql_candidatura = "CREATE TABLE IF NOT EXISTS candidaturas ( id_candidatura INTE
 sql_requisitos_candidatura  = "CREATE TABLE IF NOT EXISTS requisitos_candidatura ( fk_candidatura INTEGER, fk_requisito INTEGER, requisito_cumprido INTEGER, FOREIGN KEY(fk_candidatura) REFERENCES candidaturas(id_candidatura), FOREIGN KEY(fk_requisito) REFERENCES requisitos(id_requisito) );"
 
 sql_insere_vaga = "INSERT INTO vagas (nome_vaga, nome_empresa, data_vaga_criada, data_vaga_encerra, tipo_vaga, modalidade_trabalho, local_trabalho, beneficios, salario, sobre_vaga, sobre_empresa) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);"
+sql_insere_requisito = "INSERT INTO requisitos (requisito) VALUES (?)"
 
 nome_vaga = input("Digite o nome da vaga: ")
 while(nome_vaga == ""):  
@@ -26,7 +28,12 @@ salario = input("Digite o salario da vaga: ")
 sobre_vaga = input("Digite  sobre a vaga: ")
 while(sobre_vaga == ""):  
     sobre_vaga = input("Digite  sobre a vaga: ")
-sobre_empresa = input("Digite sobre a empresa: ")
+sobre_empresa = input("Digite sobre a empresa: ")  
+maisRequisito = 0                                                                                                                                                                                                                          
+while(maisRequisito == 0):                                                                                                                                                                      
+    novo_requisito = input("Digite o requisito da vaga: ")
+    requisitos.append(novo_requisito)                                                                                                                          
+    maisRequisito = int(input("Digite 0 caso tanha mais requisitos ou 1 para finalizar"))                                                                  
 
 vaga = {'nome_vaga' : nome_vaga, 'nome_empresa' : nome_empresa, 'data_vaga_criada' : data_vaga_criada, 'data_vaga_encerra' : data_vaga_encerra, 'tipo_vaga' : tipo_vaga, 'modalidade_trabalho' : modalidade_trabalho, 'local_trabalho' : local_trabalho,
          'beneficios' : beneficios,'salario' : salario,'sobre_vaga' : sobre_vaga,'sobre_empresa' : sobre_empresa}
@@ -48,12 +55,15 @@ cursor.execute(sql_requisitos_candidatura)
 
 cursor.execute(sql_insere_vaga, valores_vaga)
 
+for x in requisitos:
+    requisito_atual = (x, )
+    cursor.execute(sql_insere_requisito, requisito_atual)
 
 
-'''res = cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
+res = cursor.execute("SELECT * FROM requisitos;")
 resultado = res.fetchall()
 
-print(resultado)'''
+print(resultado)
 
 
 conexao.commit()
@@ -64,7 +74,7 @@ conexao.close()
 with open("./dados/vagas.txt", "r", encoding="utf-8") as arquivo:
     conteudo = arquivo.read()
     conteudo = conteudo.lower()
-
+    
 #codigo que ler um arquivo.json e também o deixa minusculo
 with open("./dados/perfil.json", "r", encoding="utf-8") as arquivo:
     perfil_candidato = json.load(arquivo)
@@ -94,7 +104,3 @@ else:
 print(f"Essas habilidades batem com a vaga: {habilidades}!")
 
 print(f"Porcentagem de aderência de habilidades na vaga: {porcentagem_compativel}%")
-
-resposta = input("Digite algo: ")
-print(len(resposta))
-print(resposta == "")
