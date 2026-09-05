@@ -12,7 +12,8 @@ sql_candidatura = "CREATE TABLE IF NOT EXISTS candidaturas ( id_candidatura INTE
 sql_requisitos_candidatura  = "CREATE TABLE IF NOT EXISTS requisitos_candidatura ( fk_candidatura INTEGER, fk_requisito INTEGER, requisito_cumprido INTEGER, FOREIGN KEY(fk_candidatura) REFERENCES candidaturas(id_candidatura), FOREIGN KEY(fk_requisito) REFERENCES requisitos(id_requisito) );"
 
 sql_insere_vaga = "INSERT INTO vagas (nome_vaga, nome_empresa, data_vaga_criada, data_vaga_encerra, tipo_vaga, modalidade_trabalho, local_trabalho, beneficios, salario, sobre_vaga, sobre_empresa) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);"
-sql_insere_requisito = "INSERT INTO requisitos (requisito) VALUES (?)"
+sql_insere_requisito = "INSERT INTO requisitos (requisito) VALUES (?);"
+sql_insere_requisito_vaga  = "INSERT INTO requisito_vaga(fk_vaga, fk_requisito, prioridade) VALUES (?, ?, ?);"
 
 nome_vaga = input("Digite o nome da vaga: ")
 while(nome_vaga == ""):  
@@ -28,12 +29,19 @@ salario = input("Digite o salario da vaga: ")
 sobre_vaga = input("Digite  sobre a vaga: ")
 while(sobre_vaga == ""):  
     sobre_vaga = input("Digite  sobre a vaga: ")
-sobre_empresa = input("Digite sobre a empresa: ")  
-maisRequisito = 0                                                                                                                                                                                                                          
-while(maisRequisito == 0):                                                                                                                                                                      
+sobre_empresa = input("Digite sobre a empresa: ") 
+ 
+maisRequisito = 0
+requisito_prioridade = {}
+while(maisRequisito == 0):
     novo_requisito = input("Digite o requisito da vaga: ")
-    requisitos.append(novo_requisito)                                                                                                                          
-    maisRequisito = int(input("Digite 0 caso tanha mais requisitos ou 1 para finalizar"))                                                                  
+    prioridade_requisito = int(input("Digite 1 para obrigatório ou 2 - desejável! Qual a prioridade do seu requisito: "))
+    if(prioridade_requisito == 1):
+        prioridade_requisito = "obrigatório"
+    else:
+        prioridade_requisito = "desejável"
+    requisito_prioridade[novo_requisito] = prioridade_requisito
+    maisRequisito = int(input("Digite 0 caso tenha mais requisitos ou 1 para finalizar: "))                                                                 
 
 vaga = {'nome_vaga' : nome_vaga, 'nome_empresa' : nome_empresa, 'data_vaga_criada' : data_vaga_criada, 'data_vaga_encerra' : data_vaga_encerra, 'tipo_vaga' : tipo_vaga, 'modalidade_trabalho' : modalidade_trabalho, 'local_trabalho' : local_trabalho,
          'beneficios' : beneficios,'salario' : salario,'sobre_vaga' : sobre_vaga,'sobre_empresa' : sobre_empresa}
@@ -48,19 +56,28 @@ conexao = sqlite3.connect("candidatoIA.db")
 cursor = conexao.cursor()
 
 cursor.execute(sql_vagas)
+
 cursor.execute(sql_requisitos)
 cursor.execute(sql_requisito_vaga)
 cursor.execute(sql_candidatura)
 cursor.execute(sql_requisitos_candidatura)
 
 cursor.execute(sql_insere_vaga, valores_vaga)
+id_vaga = cursor.lastrowid
 
-for x in requisitos:
+valores_requisito_vaga = []
+
+for x in requisito_prioridade:
     requisito_atual = (x, )
     cursor.execute(sql_insere_requisito, requisito_atual)
 
+    valores_requisito_vaga = (id_vaga, cursor.lastrowid, requisito_prioridade[x])
 
-res = cursor.execute("SELECT * FROM requisitos;")
+    cursor.execute(sql_insere_requisito_vaga, valores_requisito_vaga)
+
+
+
+res = cursor.execute("SELECT * FROM requisito_vaga;")
 resultado = res.fetchall()
 
 print(resultado)
@@ -104,3 +121,5 @@ else:
 print(f"Essas habilidades batem com a vaga: {habilidades}!")
 
 print(f"Porcentagem de aderência de habilidades na vaga: {porcentagem_compativel}%")
+
+print(requisito_prioridade)
