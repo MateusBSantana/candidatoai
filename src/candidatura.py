@@ -1,9 +1,10 @@
 import json
 import sqlite3
+import datetime
 
 habilidades_compativeis = []
 habilidades_incompativeis = []
-requisitos = [] 
+minhas_habilidades = [] 
 
 sql_vagas = "CREATE TABLE IF NOT EXISTS vagas ( id_vaga INTEGER PRIMARY KEY AUTOINCREMENT, nome_vaga TEXT, nome_empresa TEXT, data_vaga_criada TEXT, data_vaga_encerra TEXT, tipo_vaga TEXT, modalidade_trabalho TEXT, local_trabalho TEXT, beneficios TEXT, salario REAL, sobre_vaga TEXT, sobre_empresa TEXT );"
 sql_requisitos = "CREATE TABLE IF NOT EXISTS requisitos ( id_requisito INTEGER PRIMARY KEY AUTOINCREMENT, requisito TEXT );" 
@@ -14,6 +15,8 @@ sql_requisitos_candidatura  = "CREATE TABLE IF NOT EXISTS requisitos_candidatura
 sql_insere_vaga = "INSERT INTO vagas (nome_vaga, nome_empresa, data_vaga_criada, data_vaga_encerra, tipo_vaga, modalidade_trabalho, local_trabalho, beneficios, salario, sobre_vaga, sobre_empresa) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);"
 sql_insere_requisito = "INSERT INTO requisitos (requisito) VALUES (?);"
 sql_insere_requisito_vaga  = "INSERT INTO requisito_vaga(fk_vaga, fk_requisito, prioridade) VALUES (?, ?, ?);"
+sql_insere_candidatura = "INSERT INTO candidaturas(fk_vaga, data_candidatura, aderencia) VALUES (?, ?, ?);"
+sql_insere_requisito_candidatura = "INSERT INTO requisitos_candidatura(fk_candidatura, fk_requisito, requisito_cumprido) VALUES (?, ?, ?)"
 
 nome_vaga = input("Digite o nome da vaga: ")
 while(nome_vaga == ""):  
@@ -41,51 +44,7 @@ while(maisRequisito == 0):
     else:
         prioridade_requisito = "desejável"
     requisito_prioridade[novo_requisito] = prioridade_requisito
-    maisRequisito = int(input("Digite 0 caso tenha mais requisitos ou 1 para finalizar: "))                                                                 
-
-vaga = {'nome_vaga' : nome_vaga, 'nome_empresa' : nome_empresa, 'data_vaga_criada' : data_vaga_criada, 'data_vaga_encerra' : data_vaga_encerra, 'tipo_vaga' : tipo_vaga, 'modalidade_trabalho' : modalidade_trabalho, 'local_trabalho' : local_trabalho,
-         'beneficios' : beneficios,'salario' : salario,'sobre_vaga' : sobre_vaga,'sobre_empresa' : sobre_empresa}
-
-for x in vaga:
-    if(vaga[x] == ""):
-        vaga[x] = None
-
-valores_vaga = tuple(vaga.values())
-
-conexao = sqlite3.connect("candidatoIA.db")
-cursor = conexao.cursor()
-
-cursor.execute(sql_vagas)
-
-cursor.execute(sql_requisitos)
-cursor.execute(sql_requisito_vaga)
-cursor.execute(sql_candidatura)
-cursor.execute(sql_requisitos_candidatura)
-
-cursor.execute(sql_insere_vaga, valores_vaga)
-id_vaga = cursor.lastrowid
-
-valores_requisito_vaga = []
-
-for x in requisito_prioridade:
-    requisito_atual = (x, )
-    cursor.execute(sql_insere_requisito, requisito_atual)
-
-    valores_requisito_vaga = (id_vaga, cursor.lastrowid, requisito_prioridade[x])
-
-    cursor.execute(sql_insere_requisito_vaga, valores_requisito_vaga)
-
-
-
-res = cursor.execute("SELECT * FROM requisito_vaga;")
-resultado = res.fetchall()
-
-print(resultado)
-
-
-conexao.commit()
-conexao.close()
-
+    maisRequisito = int(input("Digite 0 caso tenha mais requisitos ou 1 para finalizar: "))   
 
 #codigo que ler um arquivo.txt e também o deixa minusculo
 with open("./dados/vagas.txt", "r", encoding="utf-8") as arquivo:
@@ -108,18 +67,80 @@ with open("./dados/perfil.json", "r", encoding="utf-8") as arquivo:
 
 habilidades = ', '.join(habilidades_compativeis)
         
-porcentagem_compativel = len(habilidades_compativeis) * 100 / len(perfil_candidato_habilidades)
-porcentagem_compativel = int(round(porcentagem_compativel, 0))
+aderencia = len(habilidades_compativeis) * 100 / len(perfil_candidato_habilidades)
+aderencia = int(round(aderencia, 0))
 
-if(porcentagem_compativel >= 70):
+if(aderencia >= 70):
     print("Grande aderência das habilidades na vaga!")
-elif((porcentagem_compativel <= 69) and (porcentagem_compativel >= 50)):
+elif((aderencia <= 69) and (aderencia >= 50)):
     print("Boa aderência das habilidades na vaga!")
 else:
     print("Pouca aderência das habilidades na vaga")
 
 print(f"Essas habilidades batem com a vaga: {habilidades}!")
 
-print(f"Porcentagem de aderência de habilidades na vaga: {porcentagem_compativel}%")
+print(f"Porcentagem de aderência de habilidades na vaga: {aderencia}%")                                                              
 
-print(requisito_prioridade)
+vaga = {'nome_vaga' : nome_vaga, 'nome_empresa' : nome_empresa, 'data_vaga_criada' : data_vaga_criada, 'data_vaga_encerra' : data_vaga_encerra, 'tipo_vaga' : tipo_vaga, 'modalidade_trabalho' : modalidade_trabalho, 'local_trabalho' : local_trabalho,
+         'beneficios' : beneficios,'salario' : salario,'sobre_vaga' : sobre_vaga,'sobre_empresa' : sobre_empresa}
+
+for x in vaga:
+    if(vaga[x] == ""):
+        vaga[x] = None
+
+valores_vaga = tuple(vaga.values())
+
+data_candidatura = str(datetime.datetime.now())
+
+
+
+conexao = sqlite3.connect("candidatoIA.db")
+cursor = conexao.cursor()
+
+cursor.execute(sql_vagas)
+
+cursor.execute(sql_requisitos)
+cursor.execute(sql_requisito_vaga)
+cursor.execute(sql_candidatura)
+cursor.execute(sql_requisitos_candidatura)
+
+cursor.execute(sql_insere_vaga, valores_vaga)
+id_vaga = cursor.lastrowid
+
+valores_requisito_vaga = []
+
+candidatura = (id_vaga, data_candidatura, aderencia)
+cursor.execute(sql_insere_candidatura, candidatura)
+id_candidatura = cursor.lastrowid
+
+minhas_habilidades = []
+
+for requisito in perfil_candidato_habilidades:
+    requisito = requisito.lower()
+    minhas_habilidades.append(requisito)
+
+for x in requisito_prioridade:
+    requisito_atual = (x, )
+    cursor.execute(sql_insere_requisito, requisito_atual)
+
+    valores_requisito_vaga = (id_vaga, cursor.lastrowid, requisito_prioridade[x])
+
+    cursor.execute(sql_insere_requisito_vaga, valores_requisito_vaga)
+
+    if(x.lower() in minhas_habilidades):
+        requisito_cumprido = 1
+    else:
+        requisito_cumprido = 0
+
+    valores_requisito_candidatura = (id_candidatura, cursor.lastrowid, requisito_cumprido)
+    cursor.execute(sql_insere_requisito_candidatura, valores_requisito_candidatura)
+
+                                     
+res = cursor.execute("SELECT * FROM requisitos_candidatura")
+resultado = res.fetchall()
+
+print(resultado)
+
+
+conexao.commit()
+conexao.close()
