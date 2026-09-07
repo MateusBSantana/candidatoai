@@ -1,70 +1,60 @@
-Profissional Cientista de Dados Junior
-Remota
-BR
-A primeira coisa que você precisa saber é que aqui você não vai cair na rotina. A Radix desenvolve soluções para empresas de diferentes setores e indústrias. Cada projeto tem suas tecnologias, soluções e prazos e você terá oportunidade de atuar e experimentar diferentes desafios. Além da nossa atuação pelo Brasil, com escritório no Rio de janeiro, São Paulo e Belo Horizonte, temos também filiais nos Estados Unidos, fazendo com que a Radix se consolide cada vez mais como uma empresa global. 
+Sobre a vaga
+Como você imagina o seu futuro? O que você deseja dele? E, mais importante, o que você está fazendo para que ele se torne possível?
 
- 
+Há 28 anos temos engenhado um caminho que aponta para novos futuros possíveis, passando pela busca de uma realidade cada vez mais inclusiva, com garantia de respeito e equidade para todos.
 
-Quer fazer parte dessa história e transformar ideias e sonhos em realidade? 
+Neste ano, decidimos dar um passo à frente para mudarmos, de fato, a realidade. Afinal, o futuro é agora e queremos que você esteja nele conosco.
 
- 
+Que tal ser um Time Player?
 
-Como Profissional de Ciência de Dados você vai:  
+O Time Players é o programa de estágio da Timenow. Por aqui, temos o compromisso de contribuir com a formação profissional e com o desenvolvimento de pessoas, além do incentivo à inovação e diversidade.
 
-Coletar, limpar e organizar dados de fontes diversas para análises.
-Desenvolver modelos básicos de machine learning sob a supervisão de cientistas de dados mais experientes.
-Auxiliar na execução de tarefas como criação de relatórios, geração de insights e visualização de dados.
-Contribuir na documentação de processos, scripts e análises.
-Focar no aprimoramento de habilidades técnicas, como a programação em Python, banco de dados e o uso de bibliotecas de ciência de dados como pandas, numpy e scikit-learn.
-Apoiar na validação de modelos de machine learning.
-Trabalhar em conjunto com engenheiros de dados e cientistas de dados para compreender melhor o problema de negócios e como a ciência de dados pode ser empregada para a solução dos mesmos.
- 
+Então, se você, assim como nós, é movido a resultados e quer trabalhar em um ambiente que incentiva o seu crescimento e experimentar a cultura de uma empresa que une a tradição da engenharia com a transformação provocada pela inovação, VEM SER TIME PLAYER!
 
-Para essa vaga, você deve ter:
+Estamos esperando por você! 💚💚
 
-Entender a diferença entre tipos de aprendizagem (supervisionado, não supervisionado etc.), além do básico de estatística descritiva.
-Entender o que é um dataset e saber o básico sobre análise de dados.
-Noções de base de dados relacionais e/ou não-relacionais.
-Conhecimento de Python e de algumas bibliotecas populares de ciência de dados, como pandas, scikit-learn, matplotlib etc.
-Conhecimento em algoritmos e estrutura de dados.
-Habilidades em análise: Capacidade de realizar análises de dados simples, com foco na extração, limpeza e interpretação de dados.
-Interesse em aprender novas técnicas de machine learning e boas práticas de ciência de dados.
-Habilidade para trabalhar em conjunto com profissionais mais experientes, absorvendo orientações e feedbacks.
-Inglês intermediário para conversação.
- 
+Responsabilidades e atribuições
 
-É um diferencial se você tiver:
+Apoiar na coleta, tratamento e análise de dados de diferentes fontes;
+Auxiliar na criação e manutenção de dashboards e relatórios de indicadores de desempenho (KPIs);
+Contribuir para a automatização de processos analíticos e rotinas de dados;
+Apoiar na identificação de insights e oportunidades de melhoria baseadas em dados;
+Colaborar com as áreas de negócio para interpretar resultados e gerar recomendações estratégicas.
 
-Graduação em áreas como Ciência da Computação, Engenharia, Estatística, Matemática, Física, Economia ou áreas correlatas.
-Cursos de especialização ou de curta duração em Ciência de Dados / Machine Learning.
-Conhecimento de técnicas de engenharia de prompt para geração de soluções de IA Generativa sem o emprego de fine tuning de modelos. 
-Experiência em Modelagem Matemática e Otimização Combinatória.
- 
 
-Benefícios: 
+Requisitos e qualificações
 
-Assistência Médica Nacional (para o titular e dependentes, com quarto privativo) 
-Assistência odontológica nacional (para o titular e dependentes) 
-Vale refeição / alimentação flexível 
-Auxílio home office  
-Day off (no mês do aniversário) 
-Wellhub (antigo Gympass) 
-Licença Maternidade (6 meses) e Paternidade (20 dias) estendidas 
-Auxílio creche para filhos de até 3 anos (por filho)  
-Apoio em saúde mental com a Wellz 
-Clube de Vantagens com descontos em diversos parceiros 
-Convênio com instituições de ensino e cursos de idioma 
-Desenvolvimento Profissional (Universidade Corporativa) 
-Parceria com empresa de coworkings no Brasil 
-Programa de Qualidade de Vida e Bem-Estar 
-Médico consultor para acompanhamento de radixers 
-Planos de incentivos 
- 
+Como requisito básico, você deve ter:
 
- A Radix está sempre no topo das Melhores Empresas para se trabalhar porque: 
+Estar cursando Estatística, Engenharia, Ciência da Computação, Sistemas de Informação, Matemática, Economia ou áreas correlatas entre o 3° e o 7° período;
+Conhecimento básico no Pacote Office (Excel, Word, PowerPoint);
+Boa comunicação e capacidade de trabalho em equipe;
+Capacidade analítica e raciocínio lógico;
 
-Temos profissionais comprometidos, dedicados, curiosos e inovadores. 
-O espírito de equipe é a nossa maior força. Trabalhamos de forma cooperativa e sabemos que estamos juntos, remando na mesma direção. 
-Temos um ambiente diverso, que valoriza equidade e inclusão. 
-Nossa jornada de trabalho é flexível e em quase todos os projetos é possível trabalhar de qualquer lugar do Brasil. 
-Valorizamos o bem-estar e o cuidado com as nossas pessoas, com programas de apoio à saúde mental, psiquiatra e médico consultor disponíveis.
+
+Você se destaca se tiver:
+
+Conhecimentos em ferramentas de visualização de dados (Power BI, Tableau, Looker Studio ou similares);
+Noções de SQL e manipulação de bases de dados;
+Conhecimentos em ambientes de nuvem, especialmente Microsoft Azure;
+Familiaridade com Databricks e conceitos de engenharia de dados;
+
+
+Informações adicionais
+
+Características da vaga:
+
+Regime de contratação: Flex Office (4x1);
+Local de atuação: Vitória/ES;
+Horário de trabalho: 8h as 15h;
+Tempo de contratação: 1 ano.
+
+
+Diferenciais Timenow:
+
+Acompanhamento de experiência da jornada de estágio 🎯
+Formação em planejamento 📑📊
+Cursos e trilhas de aprendizagem exclusivas 📚
+Ambiente Inovador 🕹️🎱
+Cartão de alimentação e transporte flexível - Flash Benefícios 💳
+Folga de um dia no mês do seu aniversário de vida ou de estágio 🍹🌴
