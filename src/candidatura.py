@@ -19,8 +19,11 @@ sql_insere_candidatura = "INSERT INTO candidaturas(fk_vaga, data_candidatura, ad
 sql_insere_requisito_candidatura = "INSERT INTO requisitos_candidatura(fk_candidatura, fk_requisito, requisito_cumprido) VALUES (?, ?, ?)"
 
 nome_vaga = input("Digite o nome da vaga: ")
+nome_vaga = nome_vaga.strip()
 while(nome_vaga == ""):  
     nome_vaga = input("Digite o nome da vaga: ")
+    nome_vaga = nome_vaga.strip()
+
 nome_empresa = input("Digite o nome da empresa: ")
 data_vaga_criada = input("Digite a data de inicio do processo da vaga: ")
 data_vaga_encerra = input("Digite a data de fim do processo da vaga: ")
@@ -30,21 +33,37 @@ local_trabalho = input("Digite o local de trabalho da vaga? ")
 beneficios = input("Digite os beneficios da vaga: ")
 salario = input("Digite o salario da vaga: ")
 sobre_vaga = input("Digite  sobre a vaga: ")
+
 while(sobre_vaga == ""):  
     sobre_vaga = input("Digite  sobre a vaga: ")
 sobre_empresa = input("Digite sobre a empresa: ") 
  
-maisRequisito = 0
+mais_requisito = 0
 requisito_prioridade = {}
-while(maisRequisito == 0):
-    novo_requisito = input("Digite o requisito da vaga: ")
-    prioridade_requisito = int(input("Digite 1 para obrigatório ou 2 - desejável! Qual a prioridade do seu requisito: "))
-    if(prioridade_requisito == 1):
-        prioridade_requisito = "obrigatório"
-    else:
-        prioridade_requisito = "desejável"
+while(mais_requisito == 0):
+    novo_requisito = ""
+    while(novo_requisito == ""):
+        novo_requisito = input("Digite o requisito da vaga: ")
+        novo_requisito = novo_requisito.strip()
+    prioridade_requisito = ""
+    while(prioridade_requisito != "obrigatório") and (prioridade_requisito != "desejável"):
+        prioridade_requisito = int(input("Digite 1 para obrigatório ou 2 - desejável! Qual a prioridade do seu requisito: "))
+        if(prioridade_requisito == 1):
+            prioridade_requisito = "obrigatório"
+        elif(prioridade_requisito == 2):
+            prioridade_requisito = "desejável"
+        else:
+            print("Numerão incorreta")
+            prioridade_requisito = ""
     requisito_prioridade[novo_requisito] = prioridade_requisito
-    maisRequisito = int(input("Digite 0 caso tenha mais requisitos ou 1 para finalizar: "))   
+
+    valida_requisito = 0
+    while(valida_requisito == 0):
+        mais_requisito = int(input("Digite 0 caso tenha mais requisitos ou 1 para finalizar: "))
+        valida_requisito = 1
+        if(mais_requisito != 0) and (mais_requisito !=1):
+            print("Numerão incorreta")
+            valida_requisito = 0
 
 #codigo que ler um arquivo.txt e também o deixa minusculo
 with open("./dados/vagas.txt", "r", encoding="utf-8") as arquivo:
@@ -85,6 +104,7 @@ vaga = {'nome_vaga' : nome_vaga, 'nome_empresa' : nome_empresa, 'data_vaga_criad
          'beneficios' : beneficios,'salario' : salario,'sobre_vaga' : sobre_vaga,'sobre_empresa' : sobre_empresa}
 
 for x in vaga:
+    vaga[x] = vaga[x].strip()
     if(vaga[x] == ""):
         vaga[x] = None
 
@@ -107,13 +127,9 @@ cursor.execute(sql_requisitos_candidatura)
 cursor.execute(sql_insere_vaga, valores_vaga)
 id_vaga = cursor.lastrowid
 
-valores_requisito_vaga = []
-
 candidatura = (id_vaga, data_candidatura, aderencia)
 cursor.execute(sql_insere_candidatura, candidatura)
 id_candidatura = cursor.lastrowid
-
-minhas_habilidades = []
 
 for requisito in perfil_candidato_habilidades:
     requisito = requisito.lower()
@@ -136,10 +152,10 @@ for x in requisito_prioridade:
     cursor.execute(sql_insere_requisito_candidatura, valores_requisito_candidatura)
 
                                      
-res = cursor.execute("SELECT * FROM requisitos_candidatura")
+'''res = cursor.execute("SELECT * FROM requisitos_candidatura")
 resultado = res.fetchall()
 
-print(resultado)
+print(resultado)'''
 
 
 conexao.commit()
