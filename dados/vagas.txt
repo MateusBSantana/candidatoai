@@ -1,60 +1,55 @@
 Sobre a vaga
-Como você imagina o seu futuro? O que você deseja dele? E, mais importante, o que você está fazendo para que ele se torne possível?
+Descrição e Responsabilidades
 
-Há 28 anos temos engenhado um caminho que aponta para novos futuros possíveis, passando pela busca de uma realidade cada vez mais inclusiva, com garantia de respeito e equidade para todos.
+Horário: A definir
 
-Neste ano, decidimos dar um passo à frente para mudarmos, de fato, a realidade. Afinal, o futuro é agora e queremos que você esteja nele conosco.
+Nível: Estágio
 
-Que tal ser um Time Player?
+Regime de contratação: Estágio
 
-O Time Players é o programa de estágio da Timenow. Por aqui, temos o compromisso de contribuir com a formação profissional e com o desenvolvimento de pessoas, além do incentivo à inovação e diversidade.
+ Apoiar processo de ETL (extração, transformação e leitura) e integração/ingestão de dados;
+ Apoiar análises exploratórias de dados para identificar tendências e insights;
+ Participar de treinamentos e desenvolvimento profissional para adquirir novas habilidades;
+ Apoiar em visualizações de dados (construção, modificação e atualização);
+ Aprender a utilizar ferramentas e tecnologias específicas do GAB;
+ Realizar consultas em bancos de dados para extrair informações;
+ Apoio em estudos relacionados a confiabilidade e otimização de custos relacionados a manutenção e conservação da frota.
+ Apoio em testes de produtos e peças;
+ Programação e planejamento de manutenção para execução das ordens preventivas dos veículos e componentes;
+ Atualização dos BI's
 
-Então, se você, assim como nós, é movido a resultados e quer trabalhar em um ambiente que incentiva o seu crescimento e experimentar a cultura de uma empresa que une a tradição da engenharia com a transformação provocada pela inovação, VEM SER TIME PLAYER!
+Requisitos
 
-Estamos esperando por você! 💚💚
+Requisitos
 
-Responsabilidades e atribuições
+Ensino superior cursando em cursos de tecnologia da Informação, em Ciência de Dados, Estatística, Engenharias ou áreas afins. A partir do 5º período. 
+Pacote Office avançado;
+Ter interesse em aprender Looker e Power BI;
+Já utilizar AI em nível avançado.
 
-Apoiar na coleta, tratamento e análise de dados de diferentes fontes;
-Auxiliar na criação e manutenção de dashboards e relatórios de indicadores de desempenho (KPIs);
-Contribuir para a automatização de processos analíticos e rotinas de dados;
-Apoiar na identificação de insights e oportunidades de melhoria baseadas em dados;
-Colaborar com as áreas de negócio para interpretar resultados e gerar recomendações estratégicas.
+Diferenciais
 
+Conhecimentos sobre dados relacionais, não relacionais;
+Conhecimento em programação, scripting e SQL (PySpark, Python, Excel/VBA);
+Conhecimento sobre versionamento de código e boas práticas de desenvolvimento (github, gitlab e outros)
+Conhecimentos de ferramentas de DataViz e criação de dashboards (Power BI, Tableau e outros).
 
-Requisitos e qualificações
+Benefícios
 
-Como requisito básico, você deve ter:
+Águia Clube - Clube de Benefícios Atendimento psicológicoBicicletárioCafé da manhã Informado na entrevistaVale-alimentaçãoVale-refeiçãoVale-transporte
 
-Estar cursando Estatística, Engenharia, Ciência da Computação, Sistemas de Informação, Matemática, Economia ou áreas correlatas entre o 3° e o 7° período;
-Conhecimento básico no Pacote Office (Excel, Word, PowerPoint);
-Boa comunicação e capacidade de trabalho em equipe;
-Capacidade analítica e raciocínio lógico;
+Código Da Vaga
 
+178118
 
-Você se destaca se tiver:
+Data De Cadastro
 
-Conhecimentos em ferramentas de visualização de dados (Power BI, Tableau, Looker Studio ou similares);
-Noções de SQL e manipulação de bases de dados;
-Conhecimentos em ambientes de nuvem, especialmente Microsoft Azure;
-Familiaridade com Databricks e conceitos de engenharia de dados;
+2026-09-01
 
+Data De Atualização
 
-Informações adicionais
+2026-09-02
 
-Características da vaga:
+Denunciar Vaga
 
-Regime de contratação: Flex Office (4x1);
-Local de atuação: Vitória/ES;
-Horário de trabalho: 8h as 15h;
-Tempo de contratação: 1 ano.
-
-
-Diferenciais Timenow:
-
-Acompanhamento de experiência da jornada de estágio 🎯
-Formação em planejamento 📑📊
-Cursos e trilhas de aprendizagem exclusivas 📚
-Ambiente Inovador 🕹️🎱
-Cartão de alimentação e transporte flexível - Flash Benefícios 💳
-Folga de um dia no mês do seu aniversário de vida ou de estágio 🍹🌴
+Águia Branca

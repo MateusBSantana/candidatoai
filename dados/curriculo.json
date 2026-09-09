@@ -1,0 +1,31 @@
+{
+  "nome": "Mateus Barboza Santana",
+  "endereco": "Cariacica, Espírito Santo, Brasil",
+  "objetivo": "Posição inicial em Análise ou Engenharia de Dados, com trajetória voltada para Machine Learning",
+  "contato": [
+    {"tipo": "telefone", "valor": "(27) 98814-5092"},
+    {"tipo": "email", "valor": "m_bsantana@hotmail.com"},
+    {"tipo": "linkedin", "valor": "linkedin.com/in/mateus-barboza-santana"},
+    {"tipo": "github", "valor": "github.com/MateusBSantana"}
+  ],
+  "formacao": [
+    {"diploma": "Curso Superior de Tecnologia em Sistemas para Internet", "instituicao": "Ifes", "data_inicio": "Agosto de 2024", "data_termino": "Julho de 2027", "estado": "em andamento"},
+    {"diploma": "Curso Tecnico de Desenvolvimento de Sistemas", "instituicao": "Senai", "data_inicio": "Julho de 2023", "data_termino": "Dezembro de 2024", "estado": "concluido"}
+  ],
+  "experiencia_profissional": [
+    {"cargo": "", "nome_empresa": "", "data_inicio": "", "data_termino": "", "estado": null, "descricao": ""}
+  ],
+  "projetos": [
+    {"nome_projeto": "HospedaFacil", "descricao": "Sistema de gerenciamento de pousadas", "link_projeto": "https://github.com/MateusBSantana/HospedaFacil", "tecnologias_usadas": ["javascript", "sql", "react js", "node", "git"]},
+    {"nome_projeto": "CandidatoIA", "descricao": "Sistema desenvolvido para analisar vagas, comparar requisitos com o perfil profissional do candidato e gerar informações que auxiliem na tomada de decisão durante a busca por emprego.", "link_projeto": "https://github.com/MateusBSantana/candidatoai", "tecnologias_usadas": ["python", "sql", "git"]}
+  ],
+  "certificacoes": [
+    {"nome_certificacao": "PCAP: Programming Essentials in Python", "instituicao_emissora": "Python Institute"},
+    {"nome_certificacao": "Introdução à Inteligência Artificial", "instituicao_emissora": "Google / Coursera"}
+  ],
+  "competencias": {
+    "linguagens": ["python", "java", "javascript", "sql"],
+    "ferramentas": ["git", "github", "excel", "powerbi"],
+    "sistemas_operacionais": ["Linux", "Windows"]
+  }
+}
