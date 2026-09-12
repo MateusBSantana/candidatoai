@@ -1,6 +1,5 @@
-import json
-import sqlite3
-import datetime
+import json, sqlite3, datetime
+from dotenv import load_dotenv
 
 # Estas listas guardam as habilidades encontradas ou nao encontradas na vaga.
 habilidades_compativeis = []
